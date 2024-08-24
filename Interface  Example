@@ -1,0 +1,62 @@
+public interface I1
+{
+    void Add();
+}
+
+public interface I2
+{
+    void Add();
+}
+
+public class class1 : I1
+{
+    public void Add()
+    {
+        // Implementation for I1.Add
+        Console.WriteLine("call I1");
+    }
+}
+
+public class class2 : I2
+{
+    public void Add()
+    {
+        // Implementation for I2.Add
+        Console.WriteLine("call I2");
+    }
+}
+public class CombinedClass : I1, I2
+{
+    void I1.Add()
+    {
+        // Implementation for I1.Add
+    }
+
+    void I2.Add()
+    {
+        // Implementation for I2.Add
+    }
+}
+
+public class MainClass
+{
+    public void ExampleMethod()
+    {
+        CombinedClass obj = new CombinedClass();
+
+        I1 i1 = obj;
+        I2 i2 = obj;
+
+        i1.Add(); // Calls I1.Add
+        i2.Add(); // Calls I2.Add
+
+        I1 i3 = obj;
+        i3.Add(); // Calls the implementation for I1.Add
+
+        // Casting to I2 to call I2.Add
+        I2 i4 = obj;
+        i4.Add(); // Calls the implementation for I2.Add
+
+    }
+}
+
