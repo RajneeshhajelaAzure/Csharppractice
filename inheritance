@@ -1,0 +1,43 @@
+public class A
+{
+    public string name { get; set; } 
+    public A(string name)
+    {
+        this.name = name;
+    }
+    public void display_A(string name)
+    { this.name = name; 
+        Console.WriteLine(name);    
+    }   
+}
+public class B : A
+{
+    public B(string name) : base(name) { }
+    public void fun1() { 
+    Console.WriteLine("fun1");
+    }
+    public void display_B(string name)
+    {
+        this.name = name;
+        Console.WriteLine(name);
+    }
+    public static void Main()
+    {
+        string baseclassname = "Call BaseClass";
+        string derivedclassname = "Call Derived Class";
+        A a  = new A (baseclassname);
+        a.display_A(baseclassname);
+        
+        B b = new B (derivedclassname);
+        b.display_B(derivedclassname);
+
+        A a1 = new B(baseclassname);
+        a1.display_A(baseclassname);
+
+        B b1 = new A(baseclassname);  //error  base class name not display here.......
+        a1.display_A(baseclassname);
+
+        b.fun1();
+
+    }
+} 
