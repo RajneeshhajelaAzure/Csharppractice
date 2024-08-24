@@ -1,4 +1,6 @@
-    interface I1 { void add(); }
+https://acrobat.adobe.com/id/urn:aaid:sc:AP:bdc6e9f9-8084-4fb9-afed-c734696e6ff1
+==============
+interface I1 { void add(); }
     interface I2 { void add(); }
     class class1 : I1, I2
     {
