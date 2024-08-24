@@ -1,0 +1,20 @@
+public class A
+{
+    public virtual void fun1() { Console.WriteLine("A"); }
+}
+public class B:A
+{
+    public override void fun1() { Console.WriteLine("B"); }
+    public static void Main() { 
+        A a= new A();
+        a.fun1();
+        B b= new B();
+        b.fun1();
+        A a1 = new B();
+        a1.fun1();
+        Console.ReadLine();
+        //B b1 = new A();
+        //b1.fun1();
+
+    }
+}
