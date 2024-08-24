@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DesignPatternPractice
+{
+    public interface Istrategy
+    {
+        int discount(int x);
+    }
+    public class lowDiscountStrategy : Istrategy
+    {
+        public int discount(int x) { return x * 10 / 100; }
+    }
+    public class highDiscountStrategy : Istrategy
+    {
+        public int discount(int x) { return x * 20 / 100; }
+    }
+    public class NoDiscountStrategy : Istrategy
+    {
+        public int discount(int x) { return x; }
+    }
+    public class shoppingMall
+    {
+        public Istrategy obj1;
+        public int x = 1;
+        public shoppingMall(Istrategy obj) {
+            obj1 = obj;
+        }
+        public int getfinalAmount(int amount)
+        {
+            return obj1.discount(amount);
+        }
+
+        public static void Main()
+        {
+            int amount = 1000;
+            shoppingMall obj = new shoppingMall(new lowDiscountStrategy());
+            int amt = obj.getfinalAmount(amount);
+            Console.WriteLine(amt);
+
+        }
+        
+    }
+}
