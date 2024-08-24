@@ -1,3 +1,18 @@
+interface I1 { void add(); }
+interface I2 { void add(); }
+class class1 : I1, I2
+{
+    void I1.add() { Console.WriteLine("I1 call"); }
+    void I2.add() { Console.WriteLine("I1 call"); }
+    public static void Main()
+    { 
+        class1 obj = new class1();
+        I1 i1 = obj;
+        i1.add();
+    }
+}
+=============================================================
+
 public interface I1
 {
     void Add();
