@@ -1,0 +1,55 @@
+public interface Calculator
+{
+    int function(int x, int y);
+}
+public class Add: Calculator
+{
+    public int function(int x, int y) {  return x + y; }
+}
+public class Sub: Calculator 
+{
+    public int function(int x, int y) { return x - y; }
+}
+public class Mul: Calculator
+{
+    public int function(int x, int y) { return x * y; }
+}
+public class Div: Calculator
+{
+    public int function(int x, int y) { return x / y; }
+}
+
+public class factoryclass
+{
+    public static Calculator getval(int x)
+    {
+        Calculator? obj= null;
+        if (x == 1)
+        {
+            obj = new Add();
+        }
+        else if (x == 2)
+        {
+            obj = new Sub();
+        }
+        return obj;
+    }
+    public static void Main()
+    {
+        int i = 1;
+        Calculator obj = factoryclass.getval(i);
+        int returnval= obj.function(10, 20);
+        Console.WriteLine(returnval);
+
+        i = 2;
+        Calculator obj2 = factoryclass.getval(i);
+        int returnval2 = obj2.function(20, 10);
+        Console.WriteLine(returnval2);
+
+
+        Console.ReadLine();
+    }
+}
+  
+
+
