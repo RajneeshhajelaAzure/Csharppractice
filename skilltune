@@ -1,0 +1,278 @@
+
+REC
+SJ21
+just now
+Hi
+
+
+Scenario: An ASP.NET Core application you developed is experiencing high traffic due to a successful marketing campaign. 
+The application’s performance is degrading under the load.
+
+Question: What strategies would you use to scale the application and maintain its performance during high traffic periods? Include both
+ immediate and long-term solutions in your response.
+
+Follow-up: How would you monitor the application to ensure that it remains performant under varying loads?
+
+
+Scenario: Your company is transitioning its ASP.NET applications to Azure. One of the applications uses a SQL Server database and relies on several 
+legacy features that are not directly supported in Azure SQL.
+
+Question: How would you approach migrating this application to Azure, including the database? What challenges might you face, and how would you address them?
+
+Follow-up: How would you handle any discrepancies between the legacy SQL Server features and Azure SQL capabilities?
+
+
+Question: What strategies would you use to handle exceptions gracefully in a C# application? 
+How would you ensure that your error handling approach provides useful diagnostics and maintains application stability?
+
+Follow-up: How would you implement logging and monitoring to track and address errors effectively?
+-------------------
+Question: How would you approach refactoring this codebase to improve its maintainability and readability? What principles or patterns would you apply to make the code more modular and organized?
+
+Follow-up: How would you ensure that the refactoring process does not introduce regressions or break existing functionality?
+
+
+---------------
+
+
+SJ21
+14m ago
+Hi
+
+
+Scenario: An ASP.NET Core application you developed is experiencing high traffic due to a successful marketing campaign. The application’s performance is degrading under the load.
+
+Question: What strategies would you use to scale the application and maintain its performance during high traffic periods? Include both immediate and long-term solutions in your response.
+
+Follow-up: How would you monitor the application to ensure that it remains performant under varying loads?
+
+
+Hi
+
+
+SJ21
+9m ago
+Scenario: Your company is transitioning its ASP.NET applications to Azure. One of the applications uses a SQL Server database and relies on several legacy features that are not directly supported in Azure SQL.
+
+Question: How would you approach migrating this application to Azure, including the database? What challenges might you face, and how would you address them?
+
+Follow-up: How would you handle any discrepancies between the legacy SQL Server features and Azure SQL capabilities?
+
+
+SJ21
+7m ago
+Scenario: A C# application you’re responsible for occasionally throws unhandled exceptions that result in application crashes. You need to improve the robustness of the application’s error handling.
+
+Question: What strategies would you use to handle exceptions gracefully in a C# application? How would you ensure that your error handling approach provides useful diagnostics and maintains application stability?
+
+Follow-up: How would you implement logging and monitoring to track and address errors effectively?
+
+
+SJ21
+4m ago
+Scenario: You inherit a C# codebase that is poorly structured and difficult to maintain. The code contains duplicated logic and lacks clear separation of concerns.
+
+Question: How would you approach refactoring this codebase to improve its maintainability and readability? What principles or patterns would you apply to make the code more modular and organized?
+
+Follow-up: How would you ensure that the refactoring process does not introduce regressions or break existing functionality?
+
+
+SJ21
+just now
+Scenario: You are tasked with designing a new microservices-based system for an e-commerce application. The system must handle user management, order processing, and inventory management.
+
+Question: How would you design the microservices for this application? What considerations would you take into account for 
+service boundaries, data management, and inter-service communication?
+
+Follow-up: How would you ensure that the services remain loosely coupled and can evolve independently?
+
+Question: How would you design and implement security in this microservices architecture? 
+What strategies would you use for authentication and authorization, and how would you manage tokens or credentials?
+
+-------------
+
+REC
+SJ21
+22m ago
+Hi
+
+
+Scenario: An ASP.NET Core application you developed is experiencing high traffic due to a successful marketing campaign. The application’s performance is degrading under the load.
+
+Question: What strategies would you use to scale the application and maintain its performance during high traffic periods? Include both immediate and long-term solutions in your response.
+
+Follow-up: How would you monitor the application to ensure that it remains performant under varying loads?
+
+
+Hi
+
+
+SJ21
+17m ago
+Scenario: Your company is transitioning its ASP.NET applications to Azure. One of the applications uses a SQL Server database and relies on several legacy features that are not directly supported in Azure SQL.
+
+Question: How would you approach migrating this application to Azure, including the database? What challenges might you face, and how would you address them?
+
+Follow-up: How would you handle any discrepancies between the legacy SQL Server features and Azure SQL capabilities?
+
+
+SJ21
+15m ago
+Scenario: A C# application you’re responsible for occasionally throws unhandled exceptions that result in application crashes. You need to improve the robustness of the application’s error handling.
+
+Question: What strategies would you use to handle exceptions gracefully in a C# application? How would you ensure that your error handling approach provides useful diagnostics and maintains application stability?
+
+Follow-up: How would you implement logging and monitoring to track and address errors effectively?
+
+
+SJ21
+12m ago
+Scenario: You inherit a C# codebase that is poorly structured and difficult to maintain. The code contains duplicated logic and lacks clear separation of concerns.
+
+Question: How would you approach refactoring this codebase to improve its maintainability and readability? What principles or patterns would you apply to make the code more modular and organized?
+
+Follow-up: How would you ensure that the refactoring process does not introduce regressions or break existing functionality?
+
+
+SJ21
+8m ago
+Scenario: You are tasked with designing a new microservices-based system for an e-commerce application. The system must handle user management, order processing, and inventory management.
+
+Question: How would you design the microservices for this application? What considerations would you take into account for service boundaries, data management, and inter-service communication?
+
+Follow-up: How would you ensure that the services remain loosely coupled and can evolve independently?
+
+
+SJ21
+2m ago
+Scenario: You need to implement security for a microservices application where each service needs to authenticate and authorize requests from clients and other services.
+
+Question: How would you design and implement security in this microservices architecture? What strategies would you use for authentication and authorization, and how would you manage tokens or credentials?
+
+
+SJ21
+just now
+Scenario: Users of your RESTful API have reported slow response times, particularly when querying large datasets. 
+You need to optimize the performance of the API.
+
+Question: What steps would you take to analyze and improve the performance of your RESTful API? 
+What tools or techniques would you use to identify and resolve performance bottlenecks?
+
+---------------------------
+Follow-up: How would you handle caching to enhance performance while ensuring data consistency?
+Question: How would you implement a robust error handling mechanism in a SOAP web service to ensure that errors are consistently and clearly communicated to clients?
+Follow-up: How would you structure error messages and responses to provide meaningful feedback and support for troubleshooting?
+-------------
+
+
+
+SJ21
+28m ago
+Hi
+
+
+Scenario: An ASP.NET Core application you developed is experiencing high traffic due to a successful marketing campaign. The application’s performance is degrading under the load.
+
+Question: What strategies would you use to scale the application and maintain its performance during high traffic periods? Include both immediate and long-term solutions in your response.
+
+Follow-up: How would you monitor the application to ensure that it remains performant under varying loads?
+
+
+Hi
+
+
+SJ21
+23m ago
+Scenario: Your company is transitioning its ASP.NET applications to Azure. One of the applications uses a SQL Server database and relies on several legacy features that are not directly supported in Azure SQL.
+
+Question: How would you approach migrating this application to Azure, including the database? What challenges might you face, and how would you address them?
+
+Follow-up: How would you handle any discrepancies between the legacy SQL Server features and Azure SQL capabilities?
+
+
+SJ21
+21m ago
+Scenario: A C# application you’re responsible for occasionally throws unhandled exceptions that result in application crashes. You need to improve the robustness of the application’s error handling.
+
+Question: What strategies would you use to handle exceptions gracefully in a C# application? How would you ensure that your error handling approach provides useful diagnostics and maintains application stability?
+
+Follow-up: How would you implement logging and monitoring to track and address errors effectively?
+
+
+SJ21
+18m ago
+Scenario: You inherit a C# codebase that is poorly structured and difficult to maintain. The code contains duplicated logic and lacks clear separation of concerns.
+
+Question: How would you approach refactoring this codebase to improve its maintainability and readability? What principles or patterns would you apply to make the code more modular and organized?
+
+Follow-up: How would you ensure that the refactoring process does not introduce regressions or break existing functionality?
+
+
+SJ21
+14m ago
+Scenario: You are tasked with designing a new microservices-based system for an e-commerce application. The system must handle user management, order processing, and inventory management.
+
+Question: How would you design the microservices for this application? What considerations would you take into account for service boundaries, data management, and inter-service communication?
+
+Follow-up: How would you ensure that the services remain loosely coupled and can evolve independently?
+
+
+SJ21
+8m ago
+Scenario: You need to implement security for a microservices application where each service needs to authenticate and authorize requests from clients and other services.
+
+Question: How would you design and implement security in this microservices architecture? What strategies would you use for authentication and authorization, and how would you manage tokens or credentials?
+
+
+SJ21
+5m ago
+Scenario: Users of your RESTful API have reported slow response times, particularly when querying large datasets. You need to optimize the performance of the API.
+
+Question: What steps would you take to analyze and improve the performance of your RESTful API? What tools or techniques would you use to identify and resolve performance bottlenecks?
+
+Follow-up: How would you handle caching to enhance performance while ensuring data consistency?
+
+
+SJ21
+just now
+Scenario: You’ve developed a SOAP web service for an application, but users are reporting inconsistent error handling. Some errors are not properly communicated to the clients, leading to confusion and miscommunication.
+
+Question: How would you implement a robust error handling mechanism in a SOAP web service to ensure that errors are consistently and clearly communicated to clients?
+
+Follow-up: How would you structure error messages and responses to provide meaningful feedback and support for troubleshooting?
+
+
+SJ21
+just now
+Scenario: Your ASP.NET application hosted on Azure Web Apps is experiencing increased traffic and you need to ensure it scales automatically to handle the load.
+
+Question: How would you configure auto-scaling for the Azure Web App? What metrics would you monitor to trigger scaling, and 
+how would you implement load balancing to distribute the traffic?
+
+Follow-up: How would you handle scaling for both the web app and the Azure SQL Database?
+
+
+Question: How would you deploy this application to Azure? Describe the steps and Azure services you would use for both the web app and the database. 
+How would you handle configurations and secrets?
+
+Follow-up: How would you set up a CI/CD pipeline in Azure DevOps to automate the deployment process?
+
+
+Write a program in C# Sharp to reverse a string?
+
+string[] str
+
+
+
+
+Write a program in C# Sharp to reverse a string?
+
+
+SJ21
+just now
+.Net Web API
+
+How do you construct HtmlResponseMessage?
+
+
+
