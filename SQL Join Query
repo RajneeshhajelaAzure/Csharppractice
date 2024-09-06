@@ -1,0 +1,46 @@
+--create table emp(empno int, empname varchar(20),empaddress varchar(20)) 
+create table dept(deptid int,deptname varchar(20))
+--alter table dept add empid int
+--insert into emp values(2,'B', 'GreenAvenue')
+--insert into emp values(3,'C', 'GreenAvenue')
+--insert into emp values(4,'D', 'GreenAvenue')
+--insert into emp values(5,'E', 'GreenAvenue')
+--insert into emp values(6,'F', 'GreenAvenue')
+
+
+--insert into dept values(101,'Computer')
+--insert into dept values(102,'Math')
+--insert into dept values(103,'English')
+--insert into dept values(104,'Computer')
+
+--create table empdept(empid int,deptid int)
+--insert into empdept values(1,101)
+--insert into empdept values(2,102)
+--insert into empdept values(0,102)
+--insert into empdept values(6,0)
+select * from emp
+select * from dept
+select * from empdept
+
+select emp.empname,d.deptname, ed.deptid,ed.empid  from emp 
+left outer join empdept ed on emp.empno = ed.empid
+left outer join dept d on  ed.deptid =d.deptid
+where ed.deptid is not null
+
+
+select* from emp
+select * from dept
+
+select * from emp e 
+left outer join dept d on e.empno = d.empid
+where d.deptid is not null
+
+select * from emp e 
+inner join dept d on e.empno = d.empid
+where d.deptid is not null
+
+select * from emp e 
+right outer join dept d on e.empno = d.empid
+where d.deptid is not null
+
+
