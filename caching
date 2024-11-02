@@ -1,0 +1,6 @@
+In-Memory Caching: Small-scale applications or single-instance deployments for caching frequently accessed data.
+Redis / Azure Cache for Redis: Multi-instance apps needing shared cache, especially in cloud deployments.
+CDN: Static files, images, scripts, and other resources to improve load times globally.
+Fragment Caching: Specific sections in dynamic responses to improve performance.
+Donut Caching: For pages where only portions of data are shared across users.
+Data Caching: For large, infrequently changing datasets, e.g., daily reports or analytics summaries.
