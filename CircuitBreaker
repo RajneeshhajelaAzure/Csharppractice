@@ -1,0 +1,99 @@
+The Retry and Circuit Breaker patterns are both resilience strategies commonly used to handle transient faults in distributed systems, such as when making HTTP requests to a Web API. The Polly library in .NET makes it easy to implement these patterns in your applications.
+
+Scenario
+Let's assume you have an ASP.NET MVC application that sends requests to a Web API to fetch user data. Occasionally, the API might fail due to temporary issues, and you want to use Polly to implement a retry mechanism and a circuit breaker to handle these failures gracefully.
+
+Implementation Steps
+Install Polly: First, ensure you have the Polly library installed in your ASP.NET MVC project. You can install it via NuGet:
+
+bash
+Copy code
+Install-Package Polly
+Create an HttpClient: In your MVC application, configure an HttpClient with Polly policies for retry and circuit breaker.
+
+Define Polly Policies: You will create a retry policy that will attempt to resend the request a few times before failing, and a circuit breaker policy that will stop sending requests for a certain amount of time after a series of failures.
+
+Example Code
+Here’s how you can implement these patterns in your ASP.NET MVC application:
+
+csharp
+Copy code
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Polly;
+using Polly.CircuitBreaker;
+using Polly.Retry;
+
+public class UserService
+{
+    private readonly HttpClient _httpClient;
+    private readonly AsyncRetryPolicy _retryPolicy;
+    private readonly AsyncCircuitBreakerPolicy _circuitBreakerPolicy;
+
+    public UserService(HttpClient httpClient)
+    {
+        _httpClient = httpClient;
+
+        // Define a retry policy: Retry 3 times with exponential backoff
+        _retryPolicy = Policy
+            .Handle<HttpRequestException>()
+            .WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
+
+        // Define a circuit breaker policy: Break for 30 seconds after 2 failures
+        _circuitBreakerPolicy = Policy
+            .Handle<HttpRequestException>()
+            .CircuitBreakerAsync(2, TimeSpan.FromSeconds(30));
+    }
+
+    public async Task<string> GetUserDataAsync(string userId)
+    {
+        // Combine policies: retry first, then circuit breaker
+        var policyWrap = Policy.WrapAsync(_retryPolicy, _circuitBreakerPolicy);
+
+        try
+        {
+            // Execute the HTTP request within the combined policy
+            return await policyWrap.ExecuteAsync(async () =>
+            {
+                var response = await _httpClient.GetAsync($"https://example.com/api/users/{userId}");
+                response.EnsureSuccessStatusCode();
+                return await response.Content.ReadAsStringAsync();
+            });
+        }
+        catch (BrokenCircuitException)
+        {
+            // Handle the circuit breaker state (API is temporarily unavailable)
+            return "Service is temporarily unavailable. Please try again later.";
+        }
+        catch (HttpRequestException ex)
+        {
+            // Handle the request failure after retries
+            return $"Error fetching user data: {ex.Message}";
+        }
+    }
+}
+
+// In your MVC controller
+public class UsersController : Controller
+{
+    private readonly UserService _userService;
+
+    public UsersController(UserService userService)
+    {
+        _userService = userService;
+    }
+
+    public async Task<ActionResult> GetUser(string id)
+    {
+        var result = await _userService.GetUserDataAsync(id);
+        return Content(result);
+    }
+}
+
+// In Startup.cs
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddHttpClient<UserService>();
+    services.AddControllersWithViews();
+}
